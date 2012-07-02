@@ -21,6 +21,7 @@
 package com.geeksville.location;
 
 import com.geeksville.gaggle.R;
+import com.geeksville.location.baro.BBBarometerClient;
 import com.geeksville.location.baro.DummyBarometerClient;
 
 import android.content.Context;
@@ -77,17 +78,20 @@ public class BarometerClient {
 				instance_type = vario_src;
 			}
 			break;
-		case 3:
+		case 2:
 			// FlyNet
 			if (FlynetBarometerClient.isAvailable()){
 				instance = new FlynetBarometerClient(context);
 				instance_type = vario_src;
 			}
 			break;
-		case 4:
-			// Test BT
+		case 3:
+			if (BBBarometerClient.isAvailable()){
+				instance = new BBBarometerClient(context);
+				instance_type = vario_src;
+			}
 			break;
-		case 5:
+		case 4:
 			instance = new DummyBarometerClient(context);
 			instance_type = vario_src;
 			break;
