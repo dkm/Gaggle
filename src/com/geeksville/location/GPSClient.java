@@ -270,6 +270,8 @@ public class GPSClient extends Service implements IGPSClient {
 
 	galaxys_leap_year_fix = prefs.isGalaxySLeapYearBugWorkaroundEnabled();
 
+	galaxys_leap_year_fix = prefs.isGalaxySLeapYearBugWorkaroundEnabled();
+
     instance = this;
     manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 

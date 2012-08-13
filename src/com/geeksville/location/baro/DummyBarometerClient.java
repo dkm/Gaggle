@@ -95,4 +95,9 @@ public class DummyBarometerClient extends Observable implements IBarometerClient
 			}
 		}
 	}
+
+	@Override
+	public String getStatus() {
+		return "N/A";
+	}
 }

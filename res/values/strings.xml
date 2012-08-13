@@ -186,6 +186,7 @@ Still waiting for GPS fix</string>
     <string name="topo_us_relief">Topo (US relief)</string>
     <string name="topo_us_contour">Topo (US contour)</string>
     <string name="topo_europe">Topo (Europe)</string>
+    <string name="street_map">OpenStreetMap</string>
     <string name="openhikingmap">Hiking map (Europe)</string>
     <string name="opencyclemap">Opencyclemap</string>
     <string name="openmapquest">OpenMapQuest</string>
@@ -303,8 +304,8 @@ please email kevinh@geeksville.com.</string>
 		<item >Q</item>
 	</string-array><string name="airspace_filter_max_floor">Filter out when floor is above</string><string name="vario_source">Vario device</string>
 	<string name="vario_source_menu">Select vario device</string>
-	
-	
+
+
 	<string name="use_baro">Use barometer</string>
 	<string name="use_audible_vario_descr">Beep with Vz</string>
 	<string name="baro_change_need_restart">Barometer device changed, you need to restart Gaggle</string>
@@ -312,10 +313,11 @@ please email kevinh@geeksville.com.</string>
 	<string name="weather_enable">Enable weather stations</string>
 	<string name="weather_ffvl_measures_refresh_rate">Refresh rate for weather measures</string><string name="weather_ffvl_measures_refresh_rate_descr">How often to retrieve data for weather stations (minutes)</string><string name="weather_ffvl_station_refresh_rate_descr">How often to refresh station list (hours)</string><string name="weather_ffvl_station_refresh_rate">Refresh rate for weather stations list</string><string name="testing_pref_categ">Features in test</string>
 	
-	
-	
-	
-	
-	
+	<string name="skylines_tracking">SkyLines live tracking</string>
+	<string name="skylines_tracking_summary">Enable SkyLines live tracking</string>
+	<string name="skylines_server">SkyLines server</string>
+	<string name="skylines_server_settings">SkyLines server settings</string>
+	<string name="skylines_key">SkyLines key</string>
+	<string name="skylines_problem">SkyLines problem</string>
 </resources>
   

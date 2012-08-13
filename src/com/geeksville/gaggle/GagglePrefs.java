@@ -20,6 +20,7 @@
  ******************************************************************************/
 package com.geeksville.gaggle;
 
+import java.math.BigInteger;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -42,10 +43,10 @@ public class GagglePrefs {
 	SharedPreferences.Editor editor;
 	
 	public GagglePrefs(Context c) {
+
 		prefs = PreferenceManager.getDefaultSharedPreferences(c);
 		editor = prefs.edit();
 	}
-
 	public int getCompetitionClass() {
 		String val = prefs.getString("competition_class_pref", "3").trim();
 		return Integer.parseInt(val);
@@ -73,11 +74,25 @@ public class GagglePrefs {
 		return Integer.parseInt(val);
 	}
 
+	public long getSkyLinesKey() {
+		String val = prefs.getString("skylines_key", "0");
+		return new BigInteger(val, 16).longValue();
+	}
+
+	public boolean isSkyLinesTrackingEnabled() {
+		return prefs.getBoolean("skylines_tracking", false);
+	}
+
+	public int getSkyLinesTrackingInterval() {
+		String val = prefs.getString("skylines_tracking_interval", "5");
+		return Integer.parseInt(val);
+	}
+	
 	public int getLogTimeInterval() {
 		String val = prefs.getString("tracklog_update_freq_pref", "5");
 		return Integer.parseInt(val);
 	}
-
+	
 	public float getLogDistanceInterval() {
 		String val = prefs.getString("tracklog_update_dist_pref", "100");
 		return Float.parseFloat(val);
@@ -98,8 +113,8 @@ public class GagglePrefs {
 		String val = prefs.getString("gps_update_dist_pref", "100");
 		return Float.parseFloat(val);
 	}
-
-
+	
+	
 	public int getLaunchDistX() {
 		String val = prefs.getString("launch_dist_x", "40");
 		if (val.length() == 0)
